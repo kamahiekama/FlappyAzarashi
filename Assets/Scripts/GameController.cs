@@ -7,17 +7,18 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour
 {
     // ゲームステート
-    enum State
+    public enum State
     {
         Ready,
         Play,
         GameOver
     }
 
-    State state;
+    public State state;
     int score;
 
-    public AzarashiController azarashi;
+    //public AzarashiController azarashi;
+    public FaceAzarashiController azarashi;
     public GameObject blocks;
     public Text scoreText;
     public Text stateText;
@@ -99,14 +100,6 @@ public class GameController : MonoBehaviour
         // 現在読み込んでいるシーンを再読込み
         string currentSceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(currentSceneName);
-    }
-
-    public void SetPosition(Vector3 position)
-    {
-        if (state != State.GameOver)
-        {
-            this.transform.position = position;
-        }
     }
 
     public void IncreaseScore()

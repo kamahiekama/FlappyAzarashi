@@ -74,7 +74,7 @@ public class NoseCube : MonoBehaviour
 
         // Z = 0 ( Z = 10 from camera)
         float gain = 10 / z;
-        pos2.x = 0;
+        pos2.x = -1.5f;
         pos2.y *= gain;
         pos2.z = 0;
 

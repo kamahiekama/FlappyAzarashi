@@ -174,9 +174,9 @@ Library: lib_burst_generated64
 --root-assembly=/Users/jpc00215236/Documents/GitHub/FlappyAzarashi/Temp/StagingArea/Data/Managed/Unity.Services.Core.Networking.dll
 --root-assembly=/Users/jpc00215236/Documents/GitHub/FlappyAzarashi/Temp/StagingArea/Data/Managed/TofArSegmentationAssembly.dll
 --root-assembly=/Users/jpc00215236/Documents/GitHub/FlappyAzarashi/Temp/StagingArea/Data/Managed/Unity.InternalAPIEngineBridge.001.dll
+--root-assembly=/Users/jpc00215236/Documents/GitHub/FlappyAzarashi/Temp/StagingArea/Data/Managed/Assembly-CSharp.dll
 --root-assembly=/Users/jpc00215236/Documents/GitHub/FlappyAzarashi/Temp/StagingArea/Data/Managed/MessagePackResolvers.dll
 --root-assembly=/Users/jpc00215236/Documents/GitHub/FlappyAzarashi/Temp/StagingArea/Data/Managed/Unity.Services.Core.Configuration.dll
---root-assembly=/Users/jpc00215236/Documents/GitHub/FlappyAzarashi/Temp/StagingArea/Data/Managed/Assembly-CSharp.dll
 --assembly-folder=/Users/jpc00215236/Documents/GitHub/FlappyAzarashi/Temp/StagingArea/Data/Managed/
 --pdb-search-paths=Temp/ManagedSymbols/
 --method=Unity.Burst.BurstCompiler+BurstCompilerHelper, Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::IsBurstEnabled()--8c2be93e18276203cbd918daa2748a10

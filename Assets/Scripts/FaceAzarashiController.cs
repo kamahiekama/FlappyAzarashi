@@ -14,6 +14,8 @@ public class FaceAzarashiController : MonoBehaviour
     public float relativeVelocityX;
     public GameObject sprite;
 
+    public GameController GC;
+
     public bool IsDead()
     {
         return isDead;
@@ -27,17 +29,19 @@ public class FaceAzarashiController : MonoBehaviour
 
     void Update()
     {
+        /*
         // 最高高度に達していない場合に限りタップの入力を受け付ける
         if (Input.GetButtonDown("Fire1") && transform.position.y < maxHeight)
         {
             Flap();
         }
+        //*/
 
         // 角度を反映
         ApplyAngle();
 
         // angleが水平以上だったら、アニメーターのflapフラグをtrueにする
-        animator.SetBool("flap", angle >= 0.0f && !isDead);
+        //animator.SetBool("flap", angle >= 0.0f && !isDead);
     }
 
     public void Flap()
@@ -45,11 +49,13 @@ public class FaceAzarashiController : MonoBehaviour
         // 死んだらはばたけない
         if (isDead) return;
 
+        /*
         // 重力が効いていないときは操作しない
         if (rb2d.isKinematic) return;
 
         // Velocityを直接書き換えて上方向に加速
         rb2d.velocity = new Vector2(0.0f, flapVelocity);
+        //*/
     }
 
     void ApplyAngle()
@@ -75,6 +81,15 @@ public class FaceAzarashiController : MonoBehaviour
         sprite.transform.localRotation = Quaternion.Euler(0.0f, 0.0f, angle);
     }
 
+
+    public void SetPosition(Vector3 position)
+    {
+        if (GC.state != GameController.State.GameOver)
+        {
+            this.transform.position = position;
+        }
+    }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (isDead) return;
@@ -89,6 +104,6 @@ public class FaceAzarashiController : MonoBehaviour
     public void SetSteerActive(bool active)
     {
         // Rigidbodyのオン、オフを切り替える
-        rb2d.isKinematic = !active;
+        //rb2d.isKinematic = !active;
     }
 }
