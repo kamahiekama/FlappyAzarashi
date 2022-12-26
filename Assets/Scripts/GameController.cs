@@ -101,6 +101,14 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene(currentSceneName);
     }
 
+    public void SetPosition(Vector3 position)
+    {
+        if (state != State.GameOver)
+        {
+            this.transform.position = position;
+        }
+    }
+
     public void IncreaseScore()
     {
         score++;

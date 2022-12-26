@@ -1077,6 +1077,7 @@ MonoBehaviour:
   offset: 6
   center: {x: 0, y: 0, z: 0}
   centerOnScreen: {x: 0, y: 0, z: 0}
+  Azarashi: {fileID: 1581683690}
 --- !u!114 &1220693327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1118,7 +1119,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 8363163177446569856}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57a6c154ca70740dab2a31407833c0b3, type: 3}
   m_Name: 
@@ -1405,6 +1406,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 173194823070769871, guid: 55b29865967bb4177b50d0f7b52db2d8, type: 3}
   m_PrefabInstance: {fileID: 1464681146}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1581683690 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8363163178644804793, guid: f1c249fa8b3fe4bbb91daafb4a4eb23b, type: 3}
+  m_PrefabInstance: {fileID: 8363163177446569856}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1595573096
 PrefabInstance:
@@ -2297,6 +2303,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Azarashi
       objectReference: {fileID: 0}
+    - target: {fileID: 8363163178644804791, guid: f1c249fa8b3fe4bbb91daafb4a4eb23b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8363163178644804792, guid: f1c249fa8b3fe4bbb91daafb4a4eb23b, type: 3}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8363163178644804793, guid: f1c249fa8b3fe4bbb91daafb4a4eb23b, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -2339,6 +2353,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8363163178644804793, guid: f1c249fa8b3fe4bbb91daafb4a4eb23b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8363163178644804794, guid: f1c249fa8b3fe4bbb91daafb4a4eb23b, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

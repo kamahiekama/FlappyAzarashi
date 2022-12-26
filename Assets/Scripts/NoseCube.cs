@@ -17,6 +17,8 @@ public class NoseCube : MonoBehaviour
     public Vector3 center;
     public Vector3 centerOnScreen;
 
+    public Transform Azarashi;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,6 +53,7 @@ public class NoseCube : MonoBehaviour
         Vector3 bottom = (Vector3)vs[27];
 
         center = rot * ((top + bottom) / 2) + pos;
+        float z = center.z;
 
         centerOnScreen = Camera.main.WorldToScreenPoint(center + Camera.main.transform.position);
 
@@ -63,5 +66,18 @@ public class NoseCube : MonoBehaviour
         //*/
 
         Player.anchoredPosition = centerOnScreen;
+
+        //Vector3 pos2 = Camera.main.ScreenToWorldPoint(centerOnScreen);
+        //pos2.z = 0;
+
+        Vector3 pos2 = center + Camera.main.transform.position;
+
+        // Z = 0 ( Z = 10 from camera)
+        float gain = 10 / z;
+        pos2.x = 0;
+        pos2.y *= gain;
+        pos2.z = 0;
+
+        Azarashi.position = pos2;
     }
 }
