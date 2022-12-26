@@ -11,6 +11,7 @@ public class FaceAzarashiController : MonoBehaviour
 
     public float maxHeight;
     public float flapVelocity;
+    private float oldY;
     public float relativeVelocityX;
     public GameObject sprite;
 
@@ -63,6 +64,9 @@ public class FaceAzarashiController : MonoBehaviour
         // 現在の速度、相対速度から進んでいる角度を求める
         float targetAngle;
 
+        float diffY = (transform.position.y - oldY) * 100;
+        oldY = transform.position.y;
+
         // 死亡したら常にひっくり返る
         if (isDead)
         {
@@ -71,7 +75,7 @@ public class FaceAzarashiController : MonoBehaviour
         else
         {
             targetAngle =
-                Mathf.Atan2(rb2d.velocity.y, relativeVelocityX) * Mathf.Rad2Deg;
+                Mathf.Atan2(diffY, relativeVelocityX) * Mathf.Rad2Deg;
         }
 
         // 回転アニメをスムージング
@@ -86,7 +90,7 @@ public class FaceAzarashiController : MonoBehaviour
     {
         if (GC.state != GameController.State.GameOver)
         {
-            this.transform.position = position;
+            transform.position = position;
         }
     }
 
@@ -103,7 +107,5 @@ public class FaceAzarashiController : MonoBehaviour
 
     public void SetSteerActive(bool active)
     {
-        // Rigidbodyのオン、オフを切り替える
-        //rb2d.isKinematic = !active;
     }
 }

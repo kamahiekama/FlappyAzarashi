@@ -17,7 +17,7 @@ public class NoseCube : MonoBehaviour
     public Vector3 center;
     public Vector3 centerOnScreen;
 
-    public Transform Azarashi;
+    public FaceAzarashiController Azarashi;
 
     // Start is called before the first frame update
     void Start()
@@ -78,6 +78,6 @@ public class NoseCube : MonoBehaviour
         pos2.y *= gain;
         pos2.z = 0;
 
-        Azarashi.position = pos2;
+        Azarashi.SetPosition(pos2);
     }
 }
